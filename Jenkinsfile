@@ -3,7 +3,7 @@ node('jenkinsNode1') {
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
-        emailext body: 'Clone repository', subject: 'Test', to: 'vangelov@jboxers.com'
+        emailext body: '${env.BUILD_URL} has result ${currentBuild.result}', subject: 'Status of pipeline: ${currentBuild.fullDisplayName}', to: 'vangelov@jboxers.com'
         checkout scm
     }
 
