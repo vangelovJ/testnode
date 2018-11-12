@@ -1,4 +1,4 @@
-node {
+node('jenkinsNode1') {
     def app
 
     stage('Clone repository') {
