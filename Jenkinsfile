@@ -11,7 +11,7 @@ node('jenkinsNode1') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
         emailext body: 'Build Image', subject: 'Test', to: 'vangelov@jboxers.com'
-        app = docker.build("getintodevops/hellonode")
+        app = docker.build("vangelovj/nodejs")
     }
 
     stage('Test image') {
