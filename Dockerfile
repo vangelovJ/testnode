@@ -1,7 +1,9 @@
 
 FROM node:7-onbuild
 
-LAVEL maintaner "me"
+LABEL maintaner "me"
+COPY main.js /usr/src/app/main.js
+COPY package.json /usr/src/app/package.json
 
 
 HEALTHCHECK --interval=5s \
