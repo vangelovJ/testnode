@@ -1,5 +1,5 @@
 
-FROM node:7-onbuild AS build-stage-1
+FROM node:7-onbuild
 
 LABEL maintaner "vangelov"
 COPY main.js /usr/src/app/main.js
