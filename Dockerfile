@@ -1,7 +1,7 @@
 
 FROM node:7-onbuild
 
-LABEL maintaner "vangelov"
+LABEL maintaner "vangelov1"
 COPY main.js /usr/src/app/main.js
 COPY package.json /usr/src/app/package.json
 
