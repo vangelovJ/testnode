@@ -1,7 +1,7 @@
 
-FROM node:7-onbuild
+FROM node:7-onbuild AS build-stage-1
 
-LABEL maintaner "me"
+LABEL maintaner "vangelov"
 COPY main.js /usr/src/app/main.js
 COPY package.json /usr/src/app/package.json
 
