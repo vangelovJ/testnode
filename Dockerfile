@@ -3,7 +3,6 @@ FROM alpine:edge
 
 LABEL maintaner="me"
 ADD script* /home/
-RUN /bin/bash -c '/usr/bin/touch /home/output.txt'
 EXPOSE 8000
 
 ENV S_LOC /home/script.sh
