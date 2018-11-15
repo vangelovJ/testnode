@@ -1,14 +1,19 @@
 
-FROM node:7-onbuild
-
-LABEL maintaner "vangelov1"
-COPY main.js /usr/src/app/main.js
-COPY package.json /usr/src/app/package.json
+ARG IMAGE=alpine
+FROM ${IMAGE}:edge
 
 
-HEALTHCHECK --interval=5s \
-            --timeout=5s \
-            CMD curl -f http://127.0.0.1:8000 || exit 1
-
-
+LABEL maintaner="me"
+ADD script* /home/
+RUN /bin/bash -c '/usr/bin/touch /home/output.txt'
 EXPOSE 8000
+
+ENV S_LOC /home/script.sh
+
+WORKDIR /home/
+ENTRYPOINT ["script.sh", "&"]
+
+
+HEALTHCHECK --interval=5m --timeout=3s \
+  CMD /home/healthcheck.sh
+ 
