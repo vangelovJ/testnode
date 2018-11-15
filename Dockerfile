@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-
+RUN apk add bash
 LABEL maintaner="me"
 ADD script* /home/
 ADD healthcheck* /home/
