@@ -41,7 +41,7 @@ node('jenkinsNode1') {
       // sh 'docker run -d --name db -p 8091-8093:8091-8093 -p 11210:11210 arungupta/oreilly-couchbase:latest'
 
       // Run application using Docker image
-         sh "docker run vangelovj/test:${env.BUILD_NUMBER} sleep 600"
+         sh "docker run -d vangelovj/test:${env.BUILD_NUMBER}"
 
       // Run tests using Maven
       //dir ('webapp') {
