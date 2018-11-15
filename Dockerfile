@@ -1,6 +1,4 @@
-
-ARG IMAGE=alpine
-FROM ${IMAGE}:edge
+FROM alpine:edge
 
 
 LABEL maintaner="me"
