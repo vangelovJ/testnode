@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM ubuntu:latest
 
 RUN apk add bash
 LABEL maintaner="me"
