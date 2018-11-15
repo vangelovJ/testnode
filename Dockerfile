@@ -1,6 +1,5 @@
 FROM ubuntu:latest
 
-RUN apk add bash
 LABEL maintaner="me"
 ADD script* /home/
 ADD healthcheck* /home/
