@@ -3,6 +3,7 @@ FROM alpine:edge
 
 LABEL maintaner="me"
 ADD script* /home/
+ADD healthcheck* /home/
 EXPOSE 8000
 
 ENV S_LOC /home/script.sh
