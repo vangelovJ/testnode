@@ -20,6 +20,7 @@ node('jenkinsNode1') {
         //emailext body: 'Test image', subject: 'Test', to: 'vangelov@jboxers.com'
         app.inside {
             sh 'echo "Tests passed"'
+            sh 'uname -a;date;uptime'
         }
     }
 
