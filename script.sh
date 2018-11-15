@@ -1,5 +1,4 @@
-#!/bin/bash
-
+/usr/bin/bash
 
 logfile=./output.txt
 i=200

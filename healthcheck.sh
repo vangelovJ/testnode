@@ -1,4 +1,3 @@
-#!/bin/bash
+#!/usr/bin/bash
 
-
-uptime |cut -d " " -f 3
+/usr/bin/uptime |cut -d " " -f 3
