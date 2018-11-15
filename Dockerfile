@@ -6,7 +6,7 @@ ADD healthcheck* /home/
 EXPOSE 8000
 
 WORKDIR /home/
-#ENTRYPOINT ["/home/script.sh"]
+ENTRYPOINT ["/home/script.sh"]
 
 HEALTHCHECK --interval=5m --timeout=3s \
   CMD /home/healthcheck.sh
