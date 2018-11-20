@@ -49,6 +49,8 @@ node('jenkinsNode1') {
       } finally {
       // Stop and remove database container here
       //sh 'docker-compose stop db'
+        sh 'docker container rm $(docker container ls -aq) -f'
+        sh 'docker image rm $(docker image ls -a) -f'
       //sh 'docker-compose rm db'
     }
   }
