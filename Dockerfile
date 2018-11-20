@@ -1,13 +1,5 @@
 FROM mysql/mysql-server:latest
 
 LABEL maintaner="me"
-ADD script* /home/
-ADD healthcheck* /home/
 EXPOSE 8000
-
-WORKDIR /home/
-ENTRYPOINT ["/home/script.sh"]
-
-HEALTHCHECK --interval=5m --timeout=3s \
-  CMD /home/healthcheck.sh
  
