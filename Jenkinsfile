@@ -41,7 +41,7 @@ node('jenkinsNode1') {
 
       // Run application using Docker image
          sh "docker run -d vangelovj/test:${env.BUILD_NUMBER}"
-         sh "docker exec -it vangelovj/test:${env.BUILD_NUMBER} /healthchek.sh"
+         sh "docker exec -it $(docker container ls |grep -i vangelovj/test:${env.BUILD_NUMBER} /healthchek.sh"
       // Run tests using Maven
       //dir ('webapp') {
       //  sh 'mvn exec:java -DskipTests'
@@ -51,6 +51,8 @@ node('jenkinsNode1') {
       // Stop and remove database container here
       //sh 'docker-compose stop db'
       //sh 'docker-compose rm db'
+          sh "docker container rm $(docker container ls -aq) -f"
+          sh "docker image rm $(docker image ls -a) -f"
     }
   }
       
