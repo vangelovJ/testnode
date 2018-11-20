@@ -21,6 +21,7 @@ node('jenkinsNode1') {
         app.inside {
             sh 'echo "Tests passed"'
             sh 'uname -a;date;uptime'
+            sh 'ps -ef'
         }
     }
 
