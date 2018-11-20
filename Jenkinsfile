@@ -41,7 +41,6 @@ node('jenkinsNode1') {
 
       // Run application using Docker image
          sh "docker run -d vangelovj/test:${env.BUILD_NUMBER}"
-         sh "docker exec -it $(docker container ls |grep -i vangelovj/test:${env.BUILD_NUMBER} /healthchek.sh"
       // Run tests using Maven
       //dir ('webapp') {
       //  sh 'mvn exec:java -DskipTests'
