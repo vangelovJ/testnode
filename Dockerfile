@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM mysql/mysql-server:latest
 
 LABEL maintaner="me"
 ADD script* /home/
